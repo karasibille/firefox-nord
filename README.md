@@ -52,7 +52,9 @@ builds the theme, submits it to addons.mozilla.org as a new listed version
 (AMO reviews it, the workflow does not wait), and creates a GitHub release
 with `nord-<version>.xpi`. On the first submission, AMO creates the listing
 from the name in `manifest.json` and `amo-metadata.json` (summary, category,
-license). It needs an AMO API key
+license); every later submission sends that file again: change the details
+there, not on AMO, or the next release overwrites them. It needs an AMO API
+key
 ([addons.mozilla.org/developers/addon/api/key](https://addons.mozilla.org/developers/addon/api/key/))
 in the repository secrets `AMO_JWT_ISSUER` and `AMO_JWT_SECRET`.
 

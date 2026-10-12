@@ -41,7 +41,7 @@ jobs:
             echo "::error::AMO_JWT_ISSUER and AMO_JWT_SECRET secrets are not set"
             exit 1
           fi
-          # amo-metadata.json: the listing details AMO needs to create the add-on
+          # amo-metadata.json: the listing details, sent to AMO with every version
           npx --yes web-ext@10.7.0 sign --channel listed --approval-timeout 0 --amo-metadata amo-metadata.json
 
       - name: GitHub release
