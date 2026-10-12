@@ -1,0 +1,9 @@
+{
+  "categories": ["solid"],
+  "summary": {
+    "en-US": "Dark Nord theme for Firefox, with the same color roles as a Nord desktop: nord0 frame, nord15 accent, nord11 separators."
+  },
+  "version": {
+    "license": "CC-BY-3.0"
+  }
+}

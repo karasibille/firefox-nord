@@ -33,17 +33,15 @@ npx web-ext lint     # the checks addons.mozilla.org runs on upload
 npx web-ext build    # web-ext-artifacts/nord-<version>.zip
 ```
 
-`web-ext-config.mjs` keeps the README and the license out of the package.
+`web-ext-config.mjs` keeps the README, the license and `amo-metadata.json`
+out of the package.
 The CI runs both on every push and keeps the package as the `nord-xpi`
 artifact of the run.
 
 ## Release
 
-The first version is submitted by hand on
-[addons.mozilla.org](https://addons.mozilla.org/developers/addon/submit/),
-which asks for the listing details (name, category, license). After that,
-raise `version` in `manifest.json`, commit, then push a tag with that
-version:
+Raise `version` in `manifest.json`, commit, then push a tag with that
+version (`v1.0` for the first one):
 
 ```sh
 git tag v1.1 && git push origin v1.1
@@ -52,7 +50,9 @@ git tag v1.1 && git push origin v1.1
 The release workflow checks that the tag matches the manifest, lints and
 builds the theme, submits it to addons.mozilla.org as a new listed version
 (AMO reviews it, the workflow does not wait), and creates a GitHub release
-with `nord-<version>.xpi`. It needs an AMO API key
+with `nord-<version>.xpi`. On the first submission, AMO creates the listing
+from the name in `manifest.json` and `amo-metadata.json` (summary, category,
+license). It needs an AMO API key
 ([addons.mozilla.org/developers/addon/api/key](https://addons.mozilla.org/developers/addon/api/key/))
 in the repository secrets `AMO_JWT_ISSUER` and `AMO_JWT_SECRET`.
 
