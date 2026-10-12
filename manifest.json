@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "version": "1.0",
+  "name": "nord",
+  "theme": {
+    "colors": {
+      "frame": "rgb(46, 52, 64)",
+      "tab_background_text": "rgb(180, 142, 173)",
+      "tab_line": "rgb(180, 142, 173)",
+      "tab_loading": "rgb(180, 142, 173)",
+      "toolbar": "rgb(59, 66, 82)",
+      "toolbar_text": "rgb(216, 222, 233)",
+      "toolbar_field": "rgb(76, 86, 106)",
+      "toolbar_field_text": "rgb(216, 222, 233)",
+      "toolbar_field_highlight": "rgb(180, 142, 173)",
+      "toolbar_bottom_separator": "rgb(191, 97, 106)",
+      "toolbar_vertical_separator": "rgb(191, 97, 106)",
+      "popup": "rgb(46, 52, 64)",
+      "popup_text": "rgb(216, 222, 233)"
+    }
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{6b3502a7-a196-4c7a-b73a-6adf168115d8}"
+    }
+  }
+}
